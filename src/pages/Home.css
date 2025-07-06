@@ -1,0 +1,75 @@
+.we-do {
+  margin: 10%;
+}
+
+.we-do p:first-child {
+  display: inline-block;
+  border: 1px solid black;
+  padding: 7px 8px;
+  border-radius: 15px;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.we-do p:nth-child(2) {
+  margin-top: 10px;
+  font-size: 3rem;
+  max-width: 800px;
+}
+.fade-words .word {
+  opacity: 0;
+  transform: translateY(10px);
+  display: inline-block;
+  transition: none;
+}
+
+.fade-words .word.visible {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 1;
+  transform: translateY(0);
+}
+.we-do-special {
+  margin-left: 10vw;
+}
+
+.we-do-special > div {
+  border-top: 1px solid gray;
+  padding-top: 3vw;
+  padding-bottom: 3vw;
+}
+
+.we-do-special > div > div {
+  display: flex;
+}
+.we-do-special > div > div {
+  color: rgb(239, 203, 61);
+}
+.we-do-special > div > div > p:first-child {
+  font-size: 3vw;
+  margin-top: 15px;
+}
+.we-do-special > div > div > p:nth-child(2) {
+  font-size: 8vw;
+  margin-top: 0px;
+  margin-left: 2vw;
+  margin-bottom: 0;
+  padding-left: 4vw;
+}
+
+.we-do-special > div > p {
+  margin-left: 11vw;
+}
+
+.we-do-special > div:hover {
+  cursor: pointer;
+}
+.we-do-special-wrapper {
+  position: relative;
+  display: flex;
+}
+.hover-image-inline {
+  border-radius: 8px;
+  overflow: hidden;
+  background: white; /* makes the shadow clearer */
+  /* position, size handled inline via style */
+}
