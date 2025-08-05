@@ -79,6 +79,7 @@ body {
   position: relative;
   top: 2px;
 }
+
 .video-container {
   height: 800px;
   overflow: hidden;
@@ -96,11 +97,89 @@ body {
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+/* Default overlay state - white text over video */
+.navbar-overlay .button {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.navbar-overlay .button-extra {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.navbar-overlay .dropdown-icons {
+  color: white;
+}
+
+/* Sticky navbar styles with white background */
+.navbar-overlay.navbar-sticky .button {
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.navbar-overlay.navbar-sticky .button-extra {
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.navbar-overlay.navbar-sticky .logo {
+  filter: brightness(0); /* Make logo black on white background */
+  transition: filter 0.3s ease;
+}
+
+.navbar-overlay.navbar-sticky .dropdown-icons {
+  color: black;
+}
+
+/* Ensure dropdown works properly in sticky state */
+.navbar-overlay.navbar-sticky .dropdown-menu {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.content-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   z-index: 10;
+}
+
+.overlay-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 120px; /* Space for navbar */
+}
+
+.main-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .main-navbar {
+    padding: 8px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-navbar {
+    padding: 5px 10px;
+  }
 }
 .tagline {
   color: white;
-  margin-top: 2rem;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -112,6 +191,7 @@ body {
   margin-right: 40px;
   max-width: 400px;
   text-decoration: none;
+  margin-top: 0;
 }
 .video-footer {
   display: flex;

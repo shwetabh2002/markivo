@@ -5,7 +5,10 @@ import myVideo from "/assets/digi-market.mp4";
 
 function Body() {
   const circleRef = useRef(null);
+  const navbarRef = useRef(null);
+  const videoContainerRef = useRef(null);
   const [wordIndex, setWordIndex] = useState(0);
+  const [isSticky, setIsSticky] = useState(false);
   const words = ["Bigger", "Better", "Faster"];
 
   useEffect(() => {
@@ -45,9 +48,46 @@ function Body() {
     return () => clearInterval(interval);
   }, []);
 
+  // Scroll effect for sticky navbar - only after video section ends
+  useEffect(() => {
+    const handleScroll = () => {
+      const videoContainer = videoContainerRef.current;
+      const navbar = navbarRef.current;
+      if (!videoContainer || !navbar) return;
+
+      const videoBottom = videoContainer.offsetTop + videoContainer.offsetHeight;
+      const scrolled = window.scrollY;
+
+      if (scrolled >= videoBottom - 100) {
+        // Video section has ended, make navbar sticky with white background
+        if (!isSticky) {
+          setIsSticky(true);
+          navbar.style.position = "fixed";
+          navbar.style.top = "0";
+          navbar.style.background = "white";
+          navbar.style.boxShadow = "0 2px 10px rgba(0, 0, 0, 0.1)";
+          navbar.classList.add("navbar-sticky");
+        }
+      } else {
+        // Still in video section, keep as overlay
+        if (isSticky) {
+          setIsSticky(false);
+          navbar.style.position = "absolute";
+          navbar.style.top = "0";
+          navbar.style.background = "transparent";
+          navbar.style.boxShadow = "none";
+          navbar.classList.remove("navbar-sticky");
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isSticky]);
+
   return (
     <>
-      <div className="video-container">
+      <div className="video-container" ref={videoContainerRef}>
         <video
           src={myVideo}
           width="100%"
@@ -56,9 +96,11 @@ function Body() {
           loop
           className="cropped-video"
         />
-        <div className="navbar-overlay">
+        <div className="navbar-overlay" ref={navbarRef}>
+          <Navbar />
+        </div>
+        <div className="content-overlay">
           <div className="overlay-content">
-            <Navbar />
             <div className="tagline">
               <p>We build trends</p>
             </div>
