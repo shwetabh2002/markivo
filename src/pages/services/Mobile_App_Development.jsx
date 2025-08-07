@@ -1,209 +1,151 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import Layout from '../components/common/Layout';
+import Layout from '../../components/common/Layout';
 import { 
-  FaPalette, FaDesktop, FaMobile, FaCode, FaSearch, FaRocket, 
-  FaCheckCircle, FaUsers, FaChartLine, FaCog, FaShieldAlt, FaDatabase,
-  FaArrowRight, FaPhone, FaEnvelope, FaWhatsapp, FaLaptop, FaEye
+  FaMobile, FaCode, FaAndroid, FaApple, FaDatabase, FaShieldAlt, FaRocket, 
+  FaCheckCircle, FaUsers, FaChartLine, FaCog, FaPalette, FaSearch,
+  FaArrowRight, FaPhone, FaEnvelope, FaWhatsapp, FaCloud, FaSync
 } from 'react-icons/fa';
 
-const Web_Design = () => {
+const MobileAppDevelopment = () => {
   const features = [
     {
-      icon: <FaPalette />,
-      title: "Creative Design",
-      description: "Unique, modern, and visually stunning designs that capture your brand's essence and engage your audience."
+      icon: <FaMobile />,
+      title: "Native & Cross-Platform",
+      description: "iOS and Android apps built with native performance or cross-platform solutions like React Native and Flutter."
     },
     {
-      icon: <FaDesktop />,
-      title: "Responsive Design",
-      description: "Websites that look perfect and function flawlessly on all devices - desktop, tablet, and mobile."
+      icon: <FaCode />,
+      title: "Custom App Development",
+      description: "Tailored mobile applications designed specifically for your business needs and user requirements."
     },
     {
-      icon: <FaUsers />,
-      title: "User Experience (UX)",
-      description: "Intuitive navigation, clear call-to-actions, and seamless user journeys that convert visitors into customers."
-    },
-    {
-      icon: <FaSearch />,
-      title: "SEO Optimized",
-      description: "Designs built with search engine optimization in mind for better visibility and higher rankings."
-    },
-    {
-      icon: <FaRocket />,
-      title: "Fast Performance",
-      description: "Optimized designs that load quickly and provide smooth interactions for better user satisfaction."
+      icon: <FaDatabase />,
+      title: "Backend Integration",
+      description: "Seamless integration with APIs, databases, and cloud services for robust app functionality."
     },
     {
       icon: <FaShieldAlt />,
-      title: "Security Focused",
-      description: "Secure design practices with SSL certificates and protection against common vulnerabilities."
+      title: "Security & Privacy",
+      description: "Enterprise-grade security with data encryption, secure authentication, and privacy compliance."
+    },
+    {
+      icon: <FaCloud />,
+      title: "Cloud Integration",
+      description: "Cloud-based solutions for scalability, data synchronization, and real-time updates."
+    },
+    {
+      icon: <FaRocket />,
+      title: "Performance Optimized",
+      description: "Lightning-fast apps with optimized code, efficient memory usage, and smooth user experience."
     }
   ];
 
   const benefits = [
     {
-      icon: <FaEye />,
-      title: "Professional Brand Image",
-      description: "A well-designed website establishes credibility and trust with your potential customers."
+      icon: <FaUsers />,
+      title: "Enhanced User Engagement",
+      description: "Mobile apps provide 24/7 access to your services, increasing user engagement and retention."
     },
     {
       icon: <FaChartLine />,
-      title: "Increased Conversions",
-      description: "Strategic design elements that guide users toward your business goals and objectives."
+      title: "Increased Revenue",
+      description: "Direct sales channel with in-app purchases, subscriptions, and mobile commerce capabilities."
     },
     {
       icon: <FaMobile />,
-      title: "Mobile-First Approach",
-      description: "Designs optimized for mobile users who make up the majority of web traffic today."
+      title: "Brand Recognition",
+      description: "Your app icon on users' home screens keeps your brand top-of-mind and accessible."
     },
     {
       icon: <FaCog />,
-      title: "Easy Management",
-      description: "User-friendly content management systems for easy updates and maintenance."
+      title: "Operational Efficiency",
+      description: "Streamline business processes with custom mobile solutions for your team and customers."
     }
   ];
 
   const process = [
     {
       number: "01",
-      title: "Discovery & Research",
-      description: "Understanding your business, target audience, competitors, and design requirements."
+      title: "Discovery & Strategy",
+      description: "Understanding your business goals, target audience, and defining app requirements and features."
     },
     {
       number: "02",
-      title: "Wireframing & Planning",
-      description: "Creating site structure, user flows, and wireframes to plan the user experience."
+      title: "UI/UX Design",
+      description: "Creating intuitive user interfaces and seamless user experiences with wireframes and prototypes."
     },
     {
       number: "03",
-      title: "Design & Prototyping",
-      description: "Creating visual designs, mockups, and interactive prototypes for client approval."
+      title: "Development",
+      description: "Building the app using modern frameworks and best practices for optimal performance."
     },
     {
       number: "04",
-      title: "Development & Coding",
-      description: "Converting designs into functional websites using modern technologies and best practices."
+      title: "Testing & QA",
+      description: "Comprehensive testing across devices, platforms, and performance optimization."
     },
     {
       number: "05",
-      title: "Testing & Optimization",
-      description: "Comprehensive testing across devices, browsers, and performance optimization."
+      title: "App Store Submission",
+      description: "Preparing and submitting to Apple App Store and Google Play Store with proper optimization."
     },
     {
       number: "06",
       title: "Launch & Support",
-      description: "Website deployment, monitoring, and ongoing support for continued success."
+      description: "App launch, monitoring, updates, and ongoing support to ensure continued success."
     }
   ];
 
   const faqs = [
     {
-      question: "How long does it take to design a website?",
-      answer: "Design time varies based on complexity. Simple websites take 2-3 weeks, while complex e-commerce sites may take 6-8 weeks. We'll provide a detailed timeline during the planning phase."
+      question: "How long does it take to develop a mobile app?",
+      answer: "Development time varies based on complexity. Simple apps take 6-8 weeks, while complex apps may take 12-20 weeks. We'll provide a detailed timeline during the planning phase."
     },
     {
-      question: "Do you provide website redesign services?",
-      answer: "Yes, we specialize in redesigning existing websites to improve design, functionality, and performance while preserving your content and SEO value."
+      question: "Do you develop for both iOS and Android?",
+      answer: "Yes, we develop for both platforms. We can create native apps for each platform or use cross-platform solutions like React Native and Flutter for cost-effective development."
     },
     {
-      question: "What design styles do you offer?",
-      answer: "We offer various design styles including modern, minimalist, corporate, creative, e-commerce, and custom designs tailored to your brand and industry."
+      question: "How much does mobile app development cost?",
+      answer: "Cost depends on features, complexity, and platforms. Simple apps start from ₹2-5 lakhs, while complex enterprise apps can range from ₹10-25 lakhs. We provide detailed quotes after understanding your requirements."
     },
     {
-      question: "Do you provide ongoing design support?",
-      answer: "Yes, we offer ongoing design support including updates, maintenance, and design improvements to keep your website current and effective."
+      question: "Do you provide app maintenance and updates?",
+      answer: "Yes, we offer comprehensive maintenance packages including bug fixes, feature updates, OS compatibility updates, and performance monitoring to keep your app running smoothly."
     },
     {
-      question: "Can you design for specific industries?",
-      answer: "Absolutely! We have experience designing websites for various industries including healthcare, finance, education, e-commerce, and more."
+      question: "Can you help with app store optimization (ASO)?",
+      answer: "Absolutely! We provide ASO services including keyword optimization, app store listings, screenshots, descriptions, and ratings management to improve your app's visibility and downloads."
     },
     {
-      question: "Do you provide logo and branding design?",
-      answer: "Yes, we offer comprehensive branding services including logo design, brand guidelines, and visual identity development to complement your website design."
+      question: "What technologies do you use for app development?",
+      answer: "We use React Native, Flutter, Swift (iOS), Kotlin (Android), Node.js, Firebase, and other modern technologies. We choose the best stack based on your specific requirements."
     }
   ];
 
   const technologies = [
-    {
-      name: "HTML5",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-      description: "Semantic markup"
-    },
-    {
-      name: "CSS3",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-      description: "Styling & animations"
-    },
-    {
-      name: "JavaScript",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-      description: "Interactive functionality"
-    },
-    {
-      name: "React",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-      description: "Component library"
-    },
-    {
-      name: "Vue.js",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
-      description: "Progressive framework"
-    },
-    {
-      name: "WordPress",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg",
-      description: "CMS platform"
-    },
-    {
-      name: "Figma",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
-      description: "Design & prototyping"
-    },
-    {
-      name: "Adobe XD",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xd/xd-plain.svg",
-      description: "UI/UX design"
-    },
-    {
-      name: "Sketch",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sketch/sketch-original.svg",
-      description: "Design toolkit"
-    },
-    {
-      name: "Photoshop",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg",
-      description: "Image editing"
-    },
-    {
-      name: "Illustrator",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg",
-      description: "Vector graphics"
-    },
-    {
-      name: "InVision",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/invision/invision-original.svg",
-      description: "Prototyping tool"
-    }
+    "React Native", "Flutter", "Swift", "Kotlin", "Firebase", "AWS", 
+    "Node.js", "MongoDB", "REST APIs", "GraphQL", "Docker", "Git"
   ];
 
-  const designTypes = [
+  const appTypes = [
     {
-      title: "Corporate Websites",
-      description: "Professional designs for businesses, showcasing services, team, and company information."
+      title: "E-commerce Apps",
+      description: "Online shopping platforms with payment integration, inventory management, and user accounts."
     },
     {
-      title: "E-commerce Websites",
-      description: "Online stores with product catalogs, shopping carts, and secure payment integration."
+      title: "Social Media Apps",
+      description: "Networking platforms with user profiles, messaging, content sharing, and community features."
     },
     {
-      title: "Portfolio Websites",
-      description: "Showcase designs for creative professionals, artists, and service providers."
+      title: "Business Apps",
+      description: "Enterprise solutions for internal processes, customer management, and team collaboration."
     },
     {
-      title: "Landing Pages",
-      description: "High-converting single-page designs focused on specific campaigns and goals."
+      title: "Utility Apps",
+      description: "Tools and utilities for productivity, health, finance, education, and lifestyle management."
     }
   ];
 
@@ -219,15 +161,15 @@ const Web_Design = () => {
             transition={{ duration: 0.8 }}
           >
             <div className="service-badge">
-              <FaPalette />
-              <span>Web Design</span>
+              <FaMobile />
+              <span>Mobile App Development</span>
             </div>
             <h1 className="hero-title">
-              Creative Web Design Solutions
+              Custom Mobile App Development
             </h1>
             <p className="hero-subtitle">
-              We create stunning, user-friendly websites that not only look amazing but also drive business results. 
-              From concept to launch, we deliver designs that engage, convert, and grow your business.
+              We create innovative mobile applications that engage users and drive business growth. 
+              From concept to launch, we deliver apps that users love and businesses rely on.
             </p>
             <div className="hero-cta">
               <Link to="/contact" className="btn btn-primary btn-lg">
@@ -252,19 +194,19 @@ const Web_Design = () => {
               viewport={{ margin: "-100px" }}
               transition={{ duration: 0.8 }}
             >
-              <h2>Transform Your Digital Presence</h2>
+              <h2>Transform Your Business with Mobile Apps</h2>
               <p>
-                In today's digital world, your website is often the first impression potential customers have of your business. 
-                We specialize in creating web designs that not only look stunning but also drive real business results.
+                In today's mobile-first world, having a mobile app is no longer optional - it's essential for business growth. 
+                We specialize in creating mobile applications that not only look great but also deliver real business value.
               </p>
               <p>
-                Our web design process combines creativity with strategy to deliver websites that:
+                Our mobile app development process combines cutting-edge technology with user-centered design to deliver apps that:
               </p>
               <ul>
-                <li>Engage and captivate your audience</li>
-                <li>Convert visitors into customers</li>
-                <li>Build trust and credibility</li>
-                <li>Drive business growth and success</li>
+                <li>Engage and retain users effectively</li>
+                <li>Generate new revenue streams</li>
+                <li>Improve operational efficiency</li>
+                <li>Strengthen brand presence</li>
               </ul>
             </motion.div>
             <motion.div 
@@ -275,16 +217,16 @@ const Web_Design = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <div className="stat-item">
-                <div className="stat-number">300+</div>
-                <div className="stat-label">Websites Designed</div>
+                <div className="stat-number">150+</div>
+                <div className="stat-label">Apps Delivered</div>
               </div>
               <div className="stat-item">
-                <div className="stat-number">98%</div>
-                <div className="stat-label">Client Satisfaction</div>
+                <div className="stat-number">4.8★</div>
+                <div className="stat-label">Average Rating</div>
               </div>
               <div className="stat-item">
-                <div className="stat-number">24/7</div>
-                <div className="stat-label">Design Support</div>
+                <div className="stat-number">1M+</div>
+                <div className="stat-label">Downloads</div>
               </div>
             </motion.div>
           </div>
@@ -302,7 +244,7 @@ const Web_Design = () => {
             transition={{ duration: 0.8 }}
           >
             <h2>What We Deliver</h2>
-            <p>Comprehensive web design services tailored to your business needs</p>
+            <p>Comprehensive mobile app development services for iOS and Android</p>
           </motion.div>
           
           <motion.div 
@@ -331,7 +273,7 @@ const Web_Design = () => {
         </div>
       </section>
 
-      {/* Design Types Section */}
+      {/* App Types Section */}
       <section className="service-app-types">
         <div className="container">
           <motion.div 
@@ -341,8 +283,8 @@ const Web_Design = () => {
             viewport={{ margin: "-100px" }}
             transition={{ duration: 0.8 }}
           >
-            <h2>Types of Websites We Design</h2>
-            <p>Specialized web design solutions for various business needs</p>
+            <h2>Types of Apps We Build</h2>
+            <p>Specialized mobile applications for various business needs</p>
           </motion.div>
           
           <motion.div 
@@ -352,7 +294,7 @@ const Web_Design = () => {
             viewport={{ margin: "-100px" }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            {designTypes.map((type, index) => (
+            {appTypes.map((type, index) => (
               <motion.div 
                 key={index}
                 className="app-type-card"
@@ -380,7 +322,7 @@ const Web_Design = () => {
             viewport={{ margin: "-100px" }}
             transition={{ duration: 0.8 }}
           >
-            <h2>Why Choose Our Web Design</h2>
+            <h2>Why Choose Our Mobile App Development</h2>
             <p>Experience the difference with our comprehensive approach</p>
           </motion.div>
           
@@ -420,8 +362,8 @@ const Web_Design = () => {
             viewport={{ margin: "-100px" }}
             transition={{ duration: 0.8 }}
           >
-            <h2>Our Design Process</h2>
-            <p>A systematic approach to delivering exceptional web designs</p>
+            <h2>Our Development Process</h2>
+            <p>A systematic approach to delivering exceptional mobile apps</p>
           </motion.div>
           
           <motion.div 
@@ -460,8 +402,8 @@ const Web_Design = () => {
             viewport={{ margin: "-100px" }}
             transition={{ duration: 0.8 }}
           >
-            <h2>Design Tools & Technologies</h2>
-            <p>Modern tools and technologies for creating stunning web designs</p>
+            <h2>Technologies We Use</h2>
+            <p>Modern tech stack for building robust and scalable mobile applications</p>
           </motion.div>
           
           <motion.div 
@@ -479,13 +421,9 @@ const Web_Design = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ margin: "-100px" }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ scale: 1.05, y: -5 }}
+                whileHover={{ scale: 1.1, y: -5 }}
               >
-                <div className="tech-logo-container">
-                  <img src={tech.logo} alt={tech.name} className="tech-logo" />
-                </div>
-                <h4 className="tech-name">{tech.name}</h4>
-                <p className="tech-description">{tech.description}</p>
+                {tech}
               </motion.div>
             ))}
           </motion.div>
@@ -503,7 +441,7 @@ const Web_Design = () => {
             transition={{ duration: 0.8 }}
           >
             <h2>Frequently Asked Questions</h2>
-            <p>Get answers to common questions about our web design services</p>
+            <p>Get answers to common questions about our mobile app development services</p>
           </motion.div>
           
           <motion.div 
@@ -542,9 +480,9 @@ const Web_Design = () => {
             transition={{ duration: 0.8 }}
           >
             <div className="cta-text">
-              <h2>Ready to Design Your Dream Website?</h2>
+              <h2>Ready to Build Your Mobile App?</h2>
               <p>
-                Let's discuss your project and create a website design that drives real business results. 
+                Let's discuss your app idea and create a mobile application that drives real business results. 
                 Get a free consultation and quote today.
               </p>
             </div>
@@ -563,4 +501,4 @@ const Web_Design = () => {
   );
 };
 
-export default Web_Design;
+export default MobileAppDevelopment; 

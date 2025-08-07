@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Navbar from "./common/Navbar";
 import Footer from "./common/Footer";
 import myVideo from "/assets/digi-market.mp4";
+import { BODY_CONTENT } from '../constants/content';
 
 function Body() {
   const circleRef = useRef(null);
@@ -102,18 +103,18 @@ function Body() {
         <div className="content-overlay">
           <div className="overlay-content">
             <div className="tagline">
-              <p>We build trends</p>
+              <p>{BODY_CONTENT.VIDEO_TAGLINE}</p>
             </div>
             <div className="video-footer">
               <p>
-                This page is
+                {BODY_CONTENT.VIDEO_FOOTER.TEXT}
                 <br />
                 <span key={words[wordIndex]} className="animated-word">
                   {words[wordIndex]}
                 </span>
               </p>
               <div className="circle" ref={circleRef}>
-                Schedule A Meeting
+                {BODY_CONTENT.VIDEO_FOOTER.CTA}
               </div>
             </div>
           </div>
