@@ -113,6 +113,15 @@ const Navbar = () => {
         { name: 'Mobile App Development', path: '/services/mobile_app' }
       ]
     },
+    { 
+      name: 'Pricing', 
+      path: '/pricing',
+      dropdown: [
+        { name: 'Web DevelopmentPricing', path: '/pricing/web' },
+        { name: 'App Development Pricing', path: '/pricing/app' },
+        { name: 'SEO Pricing', path: '/pricing/seo' }
+      ]
+    },
     { name: 'Portfolio', path: '/portfolio' },
     { name: 'Blog', path: '/blog' },
     { name: 'Contact', path: '/contact' }
@@ -120,10 +129,10 @@ const Navbar = () => {
 
   return (
     <nav className={`navbar ${isScrolled ? 'navbar-scrolled' : ''}`}>
-      <div className="main-navbar">
+    <div className="main-navbar">
         <div className="navbar-brand">
           <Link to="/">
-            <img src="/assets/logo.png" alt="Markivo" className="logo" />
+            <img src="/assets/axeera-logo.svg" alt="Axeera" className="logo" />
           </Link>
         </div>
 
@@ -183,9 +192,6 @@ const Navbar = () => {
 
         {/* CTA Buttons */}
         <div className="navbar-cta desktop-nav">
-          <Link to="/pricing" className="btn btn-secondary btn-sm">
-            Pricing
-          </Link>
           <Link to="/contact" className="btn btn-primary btn-sm">
             Get Quote
           </Link>
@@ -257,9 +263,6 @@ const Navbar = () => {
             </div>
           ))}
           <div className="mobile-cta">
-            <Link to="/pricing" className="btn btn-secondary btn-sm">
-              Pricing
-            </Link>
             <Link to="/contact" className="btn btn-primary btn-sm">
               Get Quote
             </Link>

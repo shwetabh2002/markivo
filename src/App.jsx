@@ -7,6 +7,10 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Pricing from "./pages/Pricing";
 import FAQ from "./pages/FAQ";
+// Pricing detail pages
+import WebPricing from "./pages/pricing/WebPricing";
+import AppPricing from "./pages/pricing/AppPricing";
+import SEOPricing from "./pages/pricing/SEOPricing";
 
 // Service pages
 import SEO from "./services/SEO";
@@ -29,6 +33,10 @@ function App() {
       <Route path="/blog" element={<Blog />} />
       <Route path="/blog/:slug" element={<BlogPost />} />
       <Route path="/pricing" element={<Pricing />} />
+      {/* Pricing detail routes */}
+      <Route path="/pricing/web" element={<WebPricing />} />
+      <Route path="/pricing/app" element={<AppPricing />} />
+      <Route path="/pricing/seo" element={<SEOPricing />} />
       <Route path="/faq" element={<FAQ />} />
       
       {/* Service Routes */}

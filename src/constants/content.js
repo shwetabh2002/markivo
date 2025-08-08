@@ -3,11 +3,11 @@
 // Following industry standards for internationalization and maintainability
 
 export const COMPANY_INFO = {
-  NAME: 'Markivo',
+  NAME: 'BytteCode',
   TAGLINE: 'Digital Marketing Agency',
   DESCRIPTION: 'Helping Indian startups and brands scale with strategic marketing.',
-  EMAIL: 'hello@markivo.com',
-  SUPPORT_EMAIL: 'support@markivo.com',
+  EMAIL: 'hello@BytteCode.com',
+  SUPPORT_EMAIL: 'support@BytteCode.com',
   PHONE_PRIMARY: '+91 6299764087',
   PHONE_SECONDARY: '+91 8969718899',
   WHATSAPP: '+91 6299764087',
@@ -39,11 +39,11 @@ export const HERO_SECTION = {
   CTA_SECONDARY: "Book a Call",
   ANIMATED_WORDS: ['Innovative', 'Strategic', 'Data-Driven', 'Results-Focused', 'Web-Powered', 'App-Driven', 'Mobile-First', 'Tech-Enabled'],
   STATS: {
-    PROJECTS: "500+",
+    PROJECTS: "100+",
     PROJECTS_LABEL: "Projects Delivered",
-    CLIENTS: "98%",
+    CLIENTS: "100%",
     CLIENTS_LABEL: "Client Satisfaction",
-    YEARS: "5+",
+    YEARS: "3+",
     YEARS_LABEL: "Years Experience"
   }
 };
@@ -321,7 +321,7 @@ export const CONTACT = {
   },
   MAP: {
     TITLE: "Find Us",
-    DESCRIPTION: "Visit our offices in Mumbai and Bangalore"
+    DESCRIPTION: "Visit our offices in San Diego, California"
   },
   FAQ: {
     TITLE: "Frequently Asked Questions",
@@ -362,7 +362,7 @@ export const FAQ = {
 };
 
 export const FOOTER = {
-  COMPANY_DESCRIPTION: "Markivo is a leading digital marketing agency helping businesses grow their online presence and achieve remarkable results through strategic marketing solutions.",
+  COMPANY_DESCRIPTION: "Axeera is a leading digital marketing agency helping businesses grow their online presence and achieve remarkable results through strategic marketing solutions.",
   QUICK_LINKS: {
     TITLE: "Quick Links",
     ITEMS: [
@@ -386,10 +386,10 @@ export const FOOTER = {
   CONTACT: {
     TITLE: "Contact Info",
     ADDRESS: "Mumbai, Maharashtra, India",
-    EMAIL: "hello@markivo.com",
+    EMAIL: "hello@axeera.com",
     PHONE: "+91 98765 43210"
   },
-  COPYRIGHT: "© 2024 Markivo. All rights reserved.",
+  COPYRIGHT: "© 2024 Axeera. All rights reserved.",
   PRIVACY_POLICY: "Privacy Policy",
   TERMS_OF_SERVICE: "Terms of Service"
 };
@@ -432,19 +432,19 @@ export const MESSAGES = {
 
 export const SEO = {
   HOME: {
-    TITLE: "Markivo - Digital Marketing Agency in India | SEO, Web Development, PPC",
-    DESCRIPTION: "Markivo is a leading digital marketing agency in India. We offer SEO, web development, PPC, social media marketing, and branding services to help businesses grow.",
+    TITLE: "Axeera - Digital Marketing Agency in India | SEO, Web Development, PPC",
+    DESCRIPTION: "Axeera is a leading digital marketing agency in India. We offer SEO, web development, PPC, social media marketing, and branding services to help businesses grow.",
     KEYWORDS: "digital marketing agency, SEO services, web development, PPC advertising, social media marketing, India"
   },
   ABOUT: {
-    TITLE: "About Markivo - Digital Marketing Agency in India",
-    DESCRIPTION: "Learn about Markivo, a trusted digital marketing agency in India with 5+ years of experience helping businesses achieve growth through strategic marketing.",
-    KEYWORDS: "about Markivo, digital marketing agency India, marketing team, company history"
+    TITLE: "About Axeera - Digital Marketing Agency in India",
+    DESCRIPTION: "Learn about Axeera, a trusted digital marketing agency in India with 5+ years of experience helping businesses achieve growth through strategic marketing.",
+    KEYWORDS: "about Axeera, digital marketing agency India, marketing team, company history"
   },
   CONTACT: {
-    TITLE: "Contact Markivo - Get in Touch with Our Digital Marketing Experts",
-    DESCRIPTION: "Contact Markivo for digital marketing services. Get in touch with our experts for SEO, web development, PPC, and social media marketing solutions.",
-    KEYWORDS: "contact Markivo, digital marketing contact, SEO services contact, marketing consultation"
+    TITLE: "Contact Axeera - Get in Touch with Our Digital Marketing Experts",
+    DESCRIPTION: "Contact Axeera for digital marketing services. Get in touch with our experts for SEO, web development, PPC, and social media marketing solutions.",
+    KEYWORDS: "contact Axeera, digital marketing contact, SEO services contact, marketing consultation"
   }
 };
 

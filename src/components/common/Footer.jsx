@@ -23,8 +23,8 @@ const Footer = () => {
           {/* Company Info */}
           <div className="footer-section">
             <div className="footer-logo">
-              <img src="/assets/logo.png" alt="Markivo" className="logo" />
-              <h4>Markivo</h4>
+              <img src="/assets/axeera-logo.svg" alt="Axeera" className="logo" />
+              <h4>ByteCode</h4>
             </div>
             <p className="footer-description">
               Empowering Indian businesses with innovative digital marketing solutions. 
@@ -86,24 +86,24 @@ const Footer = () => {
                   <p>India</p>
                 </div>
               </div>
-              <div className="contact-item">
+              {/* <div className="contact-item">
                 <FaPhone />
                 <div>
                   <p>+91 6299764087</p>
                   <p>+91 8969718899</p>
                 </div>
-              </div>
+              </div> */}
               <div className="contact-item">
                 <FaEnvelope />
                 <div>
-                  <p>info@markivo.com</p>
-                  <p>hello@markivo.com</p>
+                  <p>rohit897199@gmail.com</p>
+                  {/* <p>hello@axeera.com</p> */}
                 </div>
               </div>
               <div className="contact-item">
                 <FaClock />
                 <div>
-                  <p>Mon - Sat: 9:00 AM - 7:00 PM</p>
+                  <p>Mon - Fri: 9:00 AM - 7:00 PM</p>
                   <p>Sunday: Closed</p>
                 </div>
               </div>
@@ -122,13 +122,13 @@ const Footer = () => {
         {/* Footer Bottom */}
         <div className="footer-bottom">
           <div className="footer-bottom-content">
-            <p>&copy; {currentYear} Markivo. All rights reserved.</p>
+            <p>&copy; {currentYear} BytteCode. All rights reserved.</p>
             <div className="footer-bottom-links">
               <Link to="/privacy-policy">Privacy Policy</Link>
               <Link to="/terms-of-service">Terms of Service</Link>
               <Link to="/refund-policy">Refund Policy</Link>
+                </div>
             </div>
-          </div>
         </div>
       </div>
     </footer>

@@ -50,7 +50,7 @@ const About = () => {
       }
     },
     {
-      name: 'Shwetabh Gupta',
+      name: 'Ritik Gupta',
       position: 'Co-Founder & CTO',
       image: null, // Remove photo
       bio: 'Tech innovator and strategic thinker with deep expertise in modern web technologies, mobile development, and digital transformation.',
@@ -76,10 +76,10 @@ const About = () => {
   ];
 
   const stats = [
-    { number: '500+', label: 'Projects Completed', icon: <FaTrophy /> },
+    { number: '100+', label: 'Projects Completed', icon: <FaTrophy /> },
     { number: '150+', label: 'Happy Clients', icon: <FaUsers /> },
-    { number: '98%', label: 'Client Satisfaction', icon: <FaHeart /> },
-    { number: '5+', label: 'Years Experience', icon: <FaGlobe /> }
+    { number: '100%', label: 'Client Satisfaction', icon: <FaHeart /> },
+    { number: '3+', label: 'Years Experience', icon: <FaGlobe /> }
   ];
 
   const achievements = [
@@ -142,7 +142,7 @@ const About = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <FaRocket />
-              <span>About Markivo</span>
+              <span>About BytteCode</span>
             </motion.div>
             <h1 className="hero-title">
               Transforming Businesses Through 
@@ -182,11 +182,11 @@ const About = () => {
               transition={{ duration: 0.8 }}
             >
               <p className="section-subtitle">Our Story</p>
-              <h2 className="section-title">Three Minds, One Vision - Building Success Since 2019</h2>
+              <h2 className="section-title">Three Minds, One Vision - Building Success Since 2021</h2>
               <p className="founder-message">
-                "Markivo was born from the shared vision of three friends who believed that Indian businesses 
+                "BytteCode was born from the shared vision of three friends who believed that Indian businesses 
                 deserved world-class digital marketing solutions. Rohit brought his deep understanding of business 
-                strategy and client relations, Shwetabh contributed his technical expertise in cutting-edge web 
+                strategy and client relations, Ritik contributed his technical expertise in cutting-edge web 
                 technologies, and Vivek added his creative marketing genius to the mix."
               </p>
               <p className="founder-message">
@@ -200,8 +200,8 @@ const About = () => {
                 delivering results that truly matter for Indian businesses in the digital age."
               </p>
               <div className="founder-signature">
-                <strong>Rohit, Shwetabh & Vivek</strong>
-                <span>Co-Founders, Markivo</span>
+                <strong>Rohit, Ritik & Vivek</strong>
+                <span>Co-Founders, BytteCode</span>
               </div>
             </motion.div>
             <motion.div 
@@ -229,11 +229,11 @@ const About = () => {
                 <div className="founder-photo">
                   <div className="photo-placeholder">
                     <div className="placeholder-avatar">
-                      <span>SG</span>
+                      <span>RG</span>
                     </div>
                   </div>
                   <div className="photo-overlay">
-                    <h4>Shwetabh Gupta</h4>
+                    <h4>Ritik Gupta</h4>
                     <p>Co-Founder & CTO</p>
                   </div>
                 </div>

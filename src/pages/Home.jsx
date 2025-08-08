@@ -56,26 +56,26 @@ const Home = () => {
   const whatWeDo = [
     {
       icon: <FaRocket />,
-      title: WHAT_WE_DO.ITEMS[0].TITLE,
-      description: WHAT_WE_DO.ITEMS[0].DESCRIPTION,
+      title: "Custom Web Development",
+      description: "We build responsive, modern websites and web applications that drive conversions and user engagement.",
       color: 'from-orange-500 to-red-500'
     },
     {
-      icon: <FaChartLine />,
-      title: WHAT_WE_DO.ITEMS[1].TITLE,
-      description: WHAT_WE_DO.ITEMS[1].DESCRIPTION,
+      icon: <FaGlobe />,
+      title: "Mobile App Development",
+      description: "Native and cross-platform mobile apps that deliver exceptional user experiences across all devices.",
       color: 'from-blue-500 to-purple-500'
     },
     {
       icon: <FaBullseye />,
-      title: WHAT_WE_DO.ITEMS[2].TITLE,
-      description: WHAT_WE_DO.ITEMS[2].DESCRIPTION,
+      title: "E-commerce Solutions",
+      description: "Complete online store development with payment gateways, inventory management, and analytics.",
       color: 'from-green-500 to-teal-500'
     },
     {
       icon: <FaLightbulb />,
-      title: WHAT_WE_DO.ITEMS[3].TITLE,
-      description: WHAT_WE_DO.ITEMS[3].DESCRIPTION,
+      title: "UI/UX Design",
+      description: "Intuitive and beautiful user interfaces that enhance user experience and drive business growth.",
       color: 'from-purple-500 to-pink-500'
     }
   ];

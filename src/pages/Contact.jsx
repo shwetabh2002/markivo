@@ -585,8 +585,8 @@ const Contact = () => {
             viewport={{ margin: "-100px" }}
             transition={{ duration: 0.6 }}
           >
-            <h2>Find Us</h2>
-            <p>Visit our office in Noida, Uttar Pradesh</p>
+            <h2>{CONTACT.MAP.TITLE}</h2>
+            <p>{CONTACT.MAP.DESCRIPTION}</p>
           </motion.div>
 
           <motion.div 
@@ -597,14 +597,14 @@ const Contact = () => {
             transition={{ duration: 0.8 }}
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224345.83923192544!2d77.06889754725782!3d28.527554251825137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5a43173357b%3A0x37ffce30c87cc03f!2sNoida%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1709123456789!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.5!2d72.8777!3d19.0760!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDA0JzMzLjYiTiA3MsKwNTInNDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
               width="100%"
               height="450"
               style={{ border: 0 }}
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title={`${COMPANY_INFO.NAME} Office Location - Noida`}
+              title={`${COMPANY_INFO.NAME} Office Location`}
             ></iframe>
           </motion.div>
         </div>
