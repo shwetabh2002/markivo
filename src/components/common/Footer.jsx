@@ -113,7 +113,7 @@ const Footer = () => {
 
         {/* WhatsApp CTA */}
         <div className="whatsapp-cta">
-          <a href="https://wa.me/916299764087" target="_blank" rel="noopener noreferrer" className="whatsapp-btn">
+          <a href="https://wa.me/918969718899" target="_blank" rel="noopener noreferrer" className="whatsapp-btn">
             <FaWhatsapp />
             <span>Chat with us on WhatsApp</span>
           </a>
