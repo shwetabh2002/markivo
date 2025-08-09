@@ -12,10 +12,10 @@ const SEOPricing = () => {
     { name: 'Elite', price: '$2000', period: 'per month', features: ['150 Keywords', '30 Landing Pages', '350 Backlinks', 'GBP (GMB)', 'Social Media', 'Video Marketing', 'Marketing Automation'], cta: 'Start Now' }
   ];
 
-  const renderBullet = (text) => {
+  const renderBullet = (text, idx) => {
     const isZero = /[-–]\s*0\b/.test(text);
     return (
-      <li className={isZero ? 'feature-not-included' : 'feature-included'}>
+      <li key={`bullet-${idx}-${text}`} className={isZero ? 'feature-not-included' : 'feature-included'}>
         {isZero ? <FaTimesCircle /> : <FaCheckCircle />}
         {text}
       </li>
@@ -332,8 +332,8 @@ const SEOPricing = () => {
                 </div>
                 <h4 style={{marginTop: '0.5rem'}}>Highlights</h4>
                 <ul className="features-list">
-                  {plan.features.map((f) => (
-                    <li key={f} className="feature-included"><FaCheckCircle />{f}</li>
+                  {plan.features.map((f, idx) => (
+                    <li key={`${plan.name}-feature-${idx}-${f}`} className="feature-included"><FaCheckCircle />{f}</li>
                   ))}
                 </ul>
                 <div className="plan-features">
@@ -341,7 +341,7 @@ const SEOPricing = () => {
                     <div key={block.title} style={{ marginTop: '0.75rem' }}>
                       <h4 style={{ marginBottom: '0.25rem' }}>{block.title}</h4>
                       <ul className="features-list">
-                        {block.items.map((it) => renderBullet(it))}
+                        {block.items.map((it, idx) => renderBullet(it, idx))}
                       </ul>
                     </div>
                   ))}

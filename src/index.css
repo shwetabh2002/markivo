@@ -1397,12 +1397,6 @@ p {
     padding: 0 1rem;
   }
   
-  .hero-stats {
-    flex-direction: column;
-    gap: var(--spacing-md);
-    padding: 0 1rem;
-  }
-  
   /* Grid System */
   .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
   
@@ -4979,6 +4973,7 @@ p {
   position: relative;
   z-index: 2;
   color: white;
+  text-align: center; /* center badge and text */
 }
 
 .pricing-hero .hero-badge {
@@ -4993,6 +4988,8 @@ p {
   margin-bottom: var(--spacing-lg);
   font-size: 0.9rem;
   font-weight: 500;
+  margin-left: auto;  /* center horizontally */
+  margin-right: auto; /* center horizontally */
 }
 
 .pricing-hero .hero-title {
@@ -5504,6 +5501,25 @@ p {
   .toggle-label {
     font-size: 0.85rem;
   }
+  
+  /* Hide home hero subtitle on mobile */
+  .hero-section .hero-subtitle {
+    display: none;
+  }
+  
+  /* Keep hero stats visible and horizontal on mobile */
+  .hero-section .hero-stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: 0 var(--spacing-sm);
+  }
+  .hero-section .hero-stats .stat {
+    min-width: auto;
+    padding: 12px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -5550,142 +5566,20 @@ p {
   max-width: 1600px;
 }
 
-/* Compact typography for five-column pricing layout */
-.plans-grid.five-col .pricing-card {
-  padding: var(--spacing-xl);
+/* Responsive overrides for pricing grids */
+@media (max-width: 1400px) {
+  .plans-grid.five-col { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .plans-grid.four-col { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
-.plans-grid.five-col .plan-name {
-  font-size: 1.25rem;
+@media (max-width: 1200px) {
+  .plans-grid.five-col { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .plans-grid.four-col { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
-.plans-grid.five-col .plan-pricing {
-  margin-bottom: var(--spacing-lg);
-  padding: var(--spacing-md) 0;
+@media (max-width: 992px) {
+  .plans-grid.five-col { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .plans-grid.four-col { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
-.plans-grid.five-col .currency {
-  font-size: 1rem;
-}
-.plans-grid.five-col .amount {
-  font-size: 2.2rem;
-}
-.plans-grid.five-col .period {
-  font-size: 0.9rem;
-}
-.plans-grid.five-col .popular-badge {
-  font-size: 0.75rem;
-  padding: 6px 12px;
-}
-.plans-grid.five-col .plan-features h4 {
-  font-size: 1rem;
-}
-.plans-grid.five-col .features-list li {
-  font-size: 0.85rem;
-}
-.plans-grid.five-col .feature-included svg,
-.plans-grid.five-col .feature-not-included svg {
-  font-size: 0.7rem;
-}
-
-/* Ensure popular card does not overlap footer in five-column layout */
-.plans-grid.five-col .pricing-card.popular {
-  transform: none;
-}
-
-/* Add bottom spacing below pricing grid to avoid overlap */
-.pricing-plans .plans-grid {
-  margin-bottom: var(--spacing-2xl);
-}
-
-/* Refined feature row styles */
-.features-list li.feature-included {
-  color: var(--dark-gray);
-  background: rgba(46, 204, 113, 0.06); /* success green tint */
-  border: 1px solid rgba(46, 204, 113, 0.18);
-  border-radius: 10px;
-  padding: 6px 10px;
-}
-.features-list li.feature-included svg {
-  color: var(--success-green);
-}
-
-.features-list li.feature-not-included {
-  color: var(--error-red);
-  background: rgba(231, 76, 60, 0.06); /* error red tint */
-  border: 1px solid rgba(231, 76, 60, 0.18);
-  border-radius: 10px;
-  padding: 6px 10px;
-  text-decoration: line-through;
-  opacity: 1; /* ensure readable, no extra fading */
-}
-.features-list li.feature-not-included svg {
-  color: var(--error-red);
-}
-
-/* Wider container for pricing pages */
-.pricing-plans .container,
-.pricing-hero .container {
-  max-width: 1400px;
-  padding-left: var(--spacing-sm);
-  padding-right: var(--spacing-sm);
-}
-
-/* Allow text wrapping and prevent overflow in feature items */
-.features-list li {
-  word-wrap: break-word;
-  overflow-wrap: anywhere;
-}
-
-/* Compact vertical rhythm inside pricing cards */
-.pricing-card .features-list li {
-  padding: 4px 8px;
-}
-
-/* Slightly reduce spacing between blocks inside plan-features */
-.pricing-card .plan-features h4 {
-  margin-top: var(--spacing-sm);
-  margin-bottom: var(--spacing-xs);
-}
-
-/* Tighter plan header spacing */
-.plan-header {
-  margin-bottom: var(--spacing-lg);
-}
-
-/* Compact variant for pricing grids (Web/App) */
-.plans-grid.compact .pricing-card {
-  padding: var(--spacing-xl);
-}
-.plans-grid.compact .plan-name {
-  font-size: 1.25rem;
-}
-.plans-grid.compact .plan-pricing {
-  margin-bottom: var(--spacing-lg);
-  padding: var(--spacing-md) 0;
-}
-.plans-grid.compact .currency {
-  font-size: 1rem;
-}
-.plans-grid.compact .amount {
-  font-size: 2.2rem;
-}
-.plans-grid.compact .period {
-  font-size: 0.9rem;
-}
-.plans-grid.compact .popular-badge {
-  font-size: 0.75rem;
-  padding: 6px 12px;
-}
-.plans-grid.compact .plan-features h4 {
-  font-size: 1rem;
-}
-.plans-grid.compact .features-list li {
-  font-size: 0.85rem;
-}
-.plans-grid.compact .feature-included svg,
-.plans-grid.compact .feature-not-included svg {
-  font-size: 0.7rem;
-}
-
-/* Avoid overlap for compact popular card */
-.plans-grid.compact .pricing-card.popular {
-  transform: none;
+@media (max-width: 768px) {
+  .plans-grid.five-col,
+  .plans-grid.four-col { grid-template-columns: 1fr; }
 }
