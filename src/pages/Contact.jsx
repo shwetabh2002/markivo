@@ -198,17 +198,17 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log('🚀 Form submitted, starting EmailJS process...');
-    console.log('📝 Form data:', formData);
+    // console.log('📝 Form data:', formData);
     setIsSubmitting(true);
     
     const emailSubject = createEmailSubject(formData[FORM_FIELDS.NAME]);
     const emailBody = createEmailBody(formData);
     setEmailContent(emailBody);
-    console.log('📧 Email content prepared:', emailBody);
+    // console.log('📧 Email content prepared:', emailBody);
 
     try {
       console.log('📤 Attempting to send email via EmailJS...');
-      console.log('🔧 EmailJS Config:', EMAILJS_CONFIG);
+      // console.log('🔧 EmailJS Config:', EMAILJS_CONFIG);
       
       const result = await emailjs.send(
         EMAILJS_CONFIG.SERVICE_ID,
@@ -224,16 +224,8 @@ const Contact = () => {
           reply_to: formData[FORM_FIELDS.EMAIL]
         }
       );
-
-      console.log('✅ Email sent successfully:', result);
-      console.log('📊 EmailJS Response:', {
-        status: result.status,
-        text: result.text,
-        response: result.response
-      });
       
       setTimeout(() => {
-        console.log('🎉 Showing success message...');
         setIsSubmitting(false);
         setIsSubmitted(true);
         resetForm();
@@ -252,7 +244,6 @@ const Contact = () => {
       
       try {
         window.open(mailtoUrl, '_blank');
-        console.log('📧 Mailto fallback executed');
       } catch (mailtoError) {
         console.error('❌ Mailto error:', mailtoError);
       }

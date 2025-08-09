@@ -117,7 +117,7 @@ const Navbar = () => {
       name: 'Pricing', 
       path: '/pricing',
       dropdown: [
-        { name: 'Web DevelopmentPricing', path: '/pricing/web' },
+        { name: 'Web Development Pricing', path: '/pricing/web' },
         { name: 'App Development Pricing', path: '/pricing/app' },
         { name: 'SEO Pricing', path: '/pricing/seo' }
       ]
